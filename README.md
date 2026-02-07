@@ -15,6 +15,10 @@ A modern, visually engaging Hangman game built with Vanilla JavaScript, HTML5, a
 - **Win/Loss Feedback**: Custom modal popups showing the result and the correct word.
 - **Play Again**: Quickly restart the game with a new random word and category.
 
+## 🚀 Demo
+
+Check out the live demo here: **[https://haniasaid110.github.io/Hangman-Game/](https://haniasaid110.github.io/Hangman-Game/)**
+
 ## 🚀 Technologies Used
 
 - **HTML5**: Semantic structure and SVG for the hangman drawing.
