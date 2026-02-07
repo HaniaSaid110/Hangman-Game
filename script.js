@@ -161,10 +161,10 @@ lettersContainer.addEventListener(`click`, function (event) {
 });
 
 // modal elements
-const modal = document.querySelector("#game-modal");
-const modalTitle = document.querySelector("#modal-title");
-const modalMessage = document.querySelector("#modal-message");
-const playAgainBtn = document.querySelector("#play-again-btn");
+const modal = document.querySelector(`#game-modal`);
+const modalTitle = document.querySelector(`#modal-title`);
+const modalMessage = document.querySelector(`#modal-message`);
+const playAgainBtn = document.querySelector(`#play-again-btn`);
 
 function checkGameStatus() {
   // check for Win
@@ -173,7 +173,7 @@ function checkGameStatus() {
   let won = true;
   letterSpans.forEach((span) => {
     // if not a space and innerHTML is empty, we haven't won
-    if (!span.classList.contains("space") && span.innerHTML === "") {
+    if (!span.classList.contains(`space`) && span.innerHTML === ``) {
       won = false;
     }
   });
@@ -191,18 +191,18 @@ function checkGameStatus() {
 
 function endGame(isWin) {
   if (isWin) {
-    modalTitle.innerText = "Congratulations!";
+    modalTitle.innerText = `Congratulations!`;
     modalMessage.innerHTML = `You guessed the word: <strong>${randomCategoryWordName}</strong>`;
-    modalTitle.style.color = "var(--success-color)";
+    modalTitle.style.color = `var(--success-color)`;
   } else {
-    modalTitle.innerText = "Game Over";
+    modalTitle.innerText = `Game Over`;
     modalMessage.innerHTML = `The correct word was: <strong>${randomCategoryWordName}</strong>`;
-    modalTitle.style.color = "var(--accent-color)";
+    modalTitle.style.color = `var(--accent-color)`;
   }
-  modal.classList.add("show");
+  modal.classList.add(`show`);
 }
 
-playAgainBtn.addEventListener("click", function () {
+playAgainBtn.addEventListener(`click`, function () {
   location.reload();
 });
 
