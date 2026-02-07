@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hangman</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Modal for Game Over -->
+    <div class="modal-overlay" id="game-modal">
+      <div class="modal-content">
+        <h2 id="modal-title"></h2>
+        <p id="modal-message"></p>
+        <button id="play-again-btn">Play Again</button>
+      </div>
+    </div>
+
+    <!-- game contauiner -->
+    <div class="game-container">
+      <header>
+        <h1>Hangman</h1>
+        <div>
+          <div class="category">
+            <span>Category: <span></span></span>
+          </div>
+          <div class="attempts">
+            <span>Attempts Left: <span></span></span>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="hangman-box">
+          <div class="hangman">
+            <svg height="300" class="hangman-structure">
+              <!-- stand base -->
+              <line x1="20" y1="250" x2="180" y2="250" />
+              <!-- stand length -->
+              <line x1="50" y1="250" x2="50" y2="20" />
+              <!-- stand rope hanger -->
+              <line x1="50" y1="20" x2="150" y2="20" />
+              <!-- stand rope -->
+              <line x1="150" y1="20" x2="150" y2="50" />
+
+              <!-- man -->
+              <!-- face -->
+              <circle
+                cx="150"
+                cy="80"
+                r="30"
+                stroke-width="4"
+                class="hide-structure"
+              />
+              <!-- body -->
+              <line
+                x1="150"
+                y1="110"
+                x2="150"
+                y2="180"
+                class="hide-structure"
+              />
+              <!-- left arm -->
+              <line
+                x1="150"
+                y1="120"
+                x2="120"
+                y2="160"
+                class="hide-structure"
+              />
+              <!-- right arm -->
+              <line
+                x1="150"
+                y1="120"
+                x2="180"
+                y2="160"
+                class="hide-structure"
+              />
+              <!-- left leg -->
+              <line
+                x1="150"
+                y1="180"
+                x2="120"
+                y2="220"
+                class="hide-structure"
+              />
+              <!-- right leg -->
+              <line
+                x1="150"
+                y1="180"
+                x2="180"
+                y2="220"
+                class="hide-structure"
+              />
+            </svg>
+          </div>
+        </section>
+
+        <!-- word section -->
+        <section>
+          <div class="letter-dashes-container"></div>
+        </section>
+
+        <!-- letters section -->
+        <section>
+          <div class="letters-container"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
